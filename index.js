@@ -41,8 +41,7 @@ const eventSchema = yup.object().shape({
         .required('End date is required'),
     attendees: yup.array()
         .of(yup.string().email('Invalid email format'))
-        .required('Attendees are required')
-        .min(1, 'At least one attendee is required'),
+        .required('Attendees are required'),
 });
 
 // Middleware for validation
