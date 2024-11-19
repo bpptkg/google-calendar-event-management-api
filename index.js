@@ -29,7 +29,7 @@ app.use(authMiddleware);
 // Define the validation schema - same for both create and update
 const eventSchema = yup.object().shape({
     summary: yup.string().required('Summary is required'),
-    description: yup.string().required('Description is required'),
+    description: yup.string().nullable(),
     location: yup.string().required('Location is required'),
     start: yup
         .string()
